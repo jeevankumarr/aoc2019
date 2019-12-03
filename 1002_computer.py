@@ -14,13 +14,10 @@ def compute(inputfile, a=12, b=2):
         l = data[i + 1]
         r = data[i + 2]
         dest = data[i + 3]
-        # print(f'Pr {i}/{mem[i]}: {l} {r} -> {dest} [ {mem[dest]} <- {mem[l]} {"+" if mem[i] == 1 else "*"} {mem[r]}]')
         if data[i] == 1:
             data[dest] = data[l] + data[r]
         elif data[i] == 2:
             data[dest] = data[l] * data[r]
-
-        # print(f'Po {i}/{mem[i]}: {l} {r} -> {dest} [ {mem[dest]} <- {mem[l]} {"+" if mem[i] == 1 else "*"} {mem[r]}]')
         i += 4
 
     return data[0]
