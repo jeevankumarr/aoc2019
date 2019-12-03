@@ -6,8 +6,8 @@ def compute(inputfile, a=12, b=2):
 
     data[1] = a
     data[2] = b
-    i = 0
 
+    i = 0
     while i < len(data):
         if data[i] == 99:
             break
@@ -23,9 +23,8 @@ def compute(inputfile, a=12, b=2):
         # print(f'Po {i}/{mem[i]}: {l} {r} -> {dest} [ {mem[dest]} <- {mem[l]} {"+" if mem[i] == 1 else "*"} {mem[r]}]')
         i += 4
 
-
-
     return data[0]
+
 def run(result=19690720):
 
     for i in range(0, 99):
@@ -33,6 +32,7 @@ def run(result=19690720):
             if result == compute('./data/1002_computer.data', i, j):
                 print(i, j)
                 break
+
 if __name__ == '__main__':
     # print(compute('./data/1002_computer.data'))
     run(19690720)
